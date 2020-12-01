@@ -39,9 +39,6 @@ class HelloRestController {
 
     @GetMapping("/hello")
     public ResponseEntity<String> hello (@RequestHeader Map<String, String> header){
-        //String hostName = System.getenv("HOSTNAME");
-        //InetAddress ia = InetAddress.getLocalHost();
-        //String hostName = ia.getHostName();
         String hostName = getHostAddress();
         printAllHeaders(header);return
         ResponseEntity.ok("<h2>Hello World! : "+hostName+"</h2>");
