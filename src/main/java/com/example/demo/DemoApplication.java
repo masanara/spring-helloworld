@@ -41,7 +41,7 @@ class HelloRestController {
     public ResponseEntity<String> hello (@RequestHeader Map<String, String> header){
         String hostAddress = getHostAddress();
         printAllHeaders(header);return
-        ResponseEntity.ok("<h2>Hello World! : "+hostAddress+"</h2>");
+        ResponseEntity.ok("<h2>Hello World! : "+hostAddress+"</h2>\n");
     }
 
     private void printAllHeaders(Map<String, String> headers) {
